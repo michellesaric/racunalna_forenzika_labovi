@@ -1,0 +1,1 @@
+Neman USB, kad ga nabavim ću napravit vježbu i updateat
