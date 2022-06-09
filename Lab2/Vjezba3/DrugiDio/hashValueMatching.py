@@ -22,17 +22,8 @@ for file in os.listdir(directory):
       sha1.update(data)
       sha256.update(data)
 
-  if "{0}".format(md5.hexdigest()) == companyHash:
+  if "{0}".format(md5.hexdigest()) == companyHash or "{0}".format(sha1.hexdigest()) == companyHash or "{0}".format(sha256.hexdigest()) == companyHash:
     print("The secret file is " + file.decode("utf-8"))
-    print("MD5: {0}".format(md5.hexdigest()))
-
-  if "{0}".format(sha1.hexdigest()) == companyHash:
-    print("The secret file is " + file.decode("utf-8"))
-    print("SHA1: {0}".format(sha1.hexdigest()))
-
-  if "{0}".format(sha256.hexdigest()) == companyHash:
-    print("The secret file is " + file.decode("utf-8"))
-    print("SHA256: {0}".format(sha256.hexdigest()))
 
   md5 = hashlib.md5()
   sha1 = hashlib.sha1()
